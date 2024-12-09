@@ -1,0 +1,11 @@
+SRC = src
+BIN = bin
+DAY = $(shell echo $(DAY))
+
+all: $(DAY)
+$(DAY): $(SRC)/day$(DAY).pas
+	mkdir -p $(BIN)
+	fpc -o$(BIN)/day$(DAY) $<
+
+run: all
+	./$(BIN)/day$(DAY)
