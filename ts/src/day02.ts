@@ -14,9 +14,6 @@ Le but est de repérer les niveaux qui répondent aux critères cumulés :
 import * as fs from 'fs';
 import * as path from 'path';
 
-// Variables
-const levels = [];
-
 // Lecture du fichier d'entrée
 const fileName: string = path.resolve(__dirname, '../../input/day02.txt');
 let fileContent = fs.readFileSync(fileName, 'utf8');
@@ -50,4 +47,4 @@ for (const line of lines) {
 }
 
 // Affichage des résultats
-console.log(levels);
+//console.log(levels);

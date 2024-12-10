@@ -14,8 +14,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // Import
 const fs = require("fs");
 const path = require("path");
-// Variables
-const levels = [];
 // Lecture du fichier d'entrée
 const fileName = path.resolve(__dirname, '../../input/day02.txt');
 let fileContent = fs.readFileSync(fileName, 'utf8');
@@ -44,4 +42,4 @@ for (const line of lines) {
     }
 }
 // Affichage des résultats
-console.log(levels);
+//console.log(levels);
