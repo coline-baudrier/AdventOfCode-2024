@@ -37,7 +37,7 @@ leftSide.sort();
 rightSide.sort();
 // Calcul de la distance absolue
 for (let j = 0; j < leftSide.length; j++) {
-    let distance = rightSide[j] - leftSide[j];
+    let distance = Math.abs(rightSide[j] - leftSide[j]);
     distanceTotale = distanceTotale + distance;
 }
 // Affichage des résultats

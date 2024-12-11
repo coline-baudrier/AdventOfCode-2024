@@ -7,7 +7,7 @@ Le but est de retrouver la distance totale entre chaque nombre par rapport aux l
 4. Associer les nombres entre eux de façon ordonnée
 5. Calculer les distances entre eux (différence absolue)
 6. Donner le résultat final (somme de toutes les distances
- */
+*/
 
 // Import
 import * as fs from 'fs';
@@ -43,8 +43,8 @@ rightSide.sort();
 
 // Calcul de la distance absolue
 for (let j = 0; j < leftSide.length; j++) {
-    let distance = rightSide[j] - leftSide[j];
-    distanceTotale = distanceTotale + distance;
+    let distance = Math.abs(rightSide[j] - leftSide[j]);
+   distanceTotale = distanceTotale + distance;
 }
 
 // Affichage des résultats

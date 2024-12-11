@@ -22,9 +22,11 @@ const fileName = path.resolve(__dirname, '../../input/day03.txt');
 let fileContent = fs.readFileSync(fileName, 'utf8');
 const searchSent = /mul\((\d{1,3}),(\d{1,3})\)/g;
 // (\d{1,3}) : capture un nombre composé de 1 à 3 chiffres
-let match;
+let match; //Typage spécifique à TypeScript
 let total = 0;
 //https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec
+//La méthode exec() exécute la recherche d'une correspondance sur une chaîne de caractères donnée. Elle renvoie un tableau contenant les résultats ou null.
+//exec() peut être utilisée afin de parcourir plusieurs correspondances dans un texte (avec des groupes capturants) (contrairement à String.prototype.match()).
 while ((match = searchSent.exec(fileContent)) !== null) {
     const x = parseInt(match[1], 10);
     const y = parseInt(match[2], 10);
@@ -32,8 +34,8 @@ while ((match = searchSent.exec(fileContent)) !== null) {
 }
 // Voir le résultat
 //Renvoie la position
-console.log(fileContent.search(searchSent));
+console.log("Position de la première correspondance :", fileContent.search(searchSent));
 //Un tableau qui contient les correspondances est renvoyé
-console.log(fileContent.match(searchSent));
+console.log("Correspondances trouvées :", fileContent.match(searchSent));
 //Voir le total
-console.log("Total : ", total);
+console.log("Total des multiplications :", total);
